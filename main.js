@@ -37,6 +37,24 @@ h3.style.textAlign = "center";
 h3.style.fontSize = "2rem";
 h3.style.fontFamily = "Arial";
 
+const allergySection = document.querySelector(".allergy-warning");
+allergySection.style.display = "flex";
+allergySection.style.flexFlow = "column";
+allergySection.style.justifyContent = "center";
+allergySection.style.alignItems = "center";
+
+const allergyList = document.querySelector(".allergies");
+allergyList.style.width = "20rem";
+allergyList.style.listStyle = "none";
+allergyList.style.marginTop = "1rem";
+
+const allergy = document.querySelectorAll(".allergy-info");
+allergy.forEach((item, i) => {
+  if (i % 2 === 1) {
+    item.style.backgroundColor = "skyBlue";
+  }
+});
+
 function color1() {
   const clr1 = Math.floor(Math.random() * 254 + 1);
   const clr2 = Math.floor(Math.random() * 254 + 1);
@@ -46,7 +64,19 @@ function color1() {
   return `rgb(${clr1},${clr2},${clr3},${trans})`;
 }
 
-// console.log(color1());
-// document.body.style.backgroundColor = "rgb(" + a + "," + b + "," + c + ")";
-// document.body.style.backgroundColor = "rgb(" + [a, b, c].join(",") + ")";
-// console.log(colorGenerator());
+const footer = document.querySelector(".footer");
+footer.style.display = "flex";
+// footer.style.flexFlow = "row wrap";
+footer.style.justifyContent = "center";
+
+const description = document.querySelectorAll(".food-desc");
+description.forEach(({ style: desc }) => {
+  desc.border = "5px solid orange";
+  desc.borderRadius = "100%";
+  desc.height = "7rem";
+  desc.width = "7rem";
+  desc.display = "flex";
+  desc.justifyContent = "center";
+  desc.alignItems = "center";
+  desc.margin = "1rem";
+});
