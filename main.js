@@ -61,8 +61,10 @@ function color1() {
   const clr3 = Math.floor(Math.random() * 254 + 1);
   const trans = Math.random().toFixed(1);
   //   console.log(trans);
-  return `rgb(${clr1},${clr2},${clr3},${trans})`;
+  return `rgba(${clr1},${clr2},${clr3},${trans})`;
 }
+
+// console.log(color1());
 
 const footer = document.querySelector(".footer");
 footer.style.display = "flex";
